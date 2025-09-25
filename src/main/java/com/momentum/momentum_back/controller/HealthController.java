@@ -14,7 +14,7 @@ public class HealthController {
   public ResponseEntity<?> healthCheck() {
     Map<String, String> message = new HashMap<>();
     message.put("message", "Server active");
-    message.put("status", "ok");
+    message.put("status", "200");
 
     return ResponseEntity.ok(message); 
   }

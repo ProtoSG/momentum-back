@@ -18,9 +18,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: jdbc:postgresql://db:5432/ddbb_momentum
-      DATABASE_USERNAME: postgres
-      DATABASE_PASSWORD: postgres
+      DATABASE_URL: jdbc:postgresql://db:5432/ddbb_momentum?user=postgres&password=postgres
       JWT_SECRET_KEY: 33345f5b9fcb3d7aa38d6b6e0eaaabe70d903348d6d0ca60e53841c7f0adf9dc
     ports:
       - "8080:8080"

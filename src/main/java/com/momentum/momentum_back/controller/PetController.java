@@ -75,4 +75,37 @@ public class PetController {
 
     return ResponseEntity.status(HttpStatus.OK).body(updatedPet);
   }
+
+  @PostMapping("/feed")
+  public ResponseEntity<?> feedPet() {
+    String userEmail = SecurityContextHolder.getContext()
+      .getAuthentication()
+      .getName();
+
+    PetDTO updatedPet = petService.feedPet(userEmail);
+
+    return ResponseEntity.status(HttpStatus.OK).body(updatedPet);
+  }
+
+  @PostMapping("/heal")
+  public ResponseEntity<?> healPet() {
+    String userEmail = SecurityContextHolder.getContext()
+      .getAuthentication()
+      .getName();
+
+    PetDTO updatedPet = petService.healPet(userEmail);
+
+    return ResponseEntity.status(HttpStatus.OK).body(updatedPet);
+  }
+
+  @PostMapping("/boost-energy")
+  public ResponseEntity<?> boostEnergy() {
+    String userEmail = SecurityContextHolder.getContext()
+      .getAuthentication()
+      .getName();
+
+    PetDTO updatedPet = petService.boostEnergy(userEmail);
+
+    return ResponseEntity.status(HttpStatus.OK).body(updatedPet);
+  }
 }

@@ -8,4 +8,5 @@ public interface UserService {
   UserDTO getUserById(Long userId);
 
   User getUserByEmail(String email);
+
 }

@@ -20,6 +20,9 @@ public class PetMapper {
       .level(pet.getLevel().getLevel())
       .pointsTotal(pet.getPointsTotal())
       .experience(pet.getExperience())
+      .health(pet.getHealth())
+      .hunger(pet.getHunger())
+      .energy(pet.getEnergy())
       .url(pet.getUrl())
       .build();
   }
@@ -32,6 +35,9 @@ public class PetMapper {
       .name(petDTO.getName())
       .pointsTotal(petDTO.getPointsTotal())
       .experience(petDTO.getExperience())
+      .health(petDTO.getHealth())
+      .hunger(petDTO.getHunger())
+      .energy(petDTO.getEnergy())
       .url(petDTO.getUrl())
       .build();
   }

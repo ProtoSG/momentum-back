@@ -27,4 +27,10 @@ public class PetDTO {
   private Integer experience;
 
   private String url;
+
+  private Integer health;
+
+  private Integer energy;
+
+  private Integer hunger;
 }

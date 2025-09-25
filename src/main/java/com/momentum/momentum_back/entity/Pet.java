@@ -53,6 +53,15 @@ public class Pet {
   @Column(name = "url", nullable = false)
   private String url;
 
+  @Column(name = "health", nullable = false)
+  private Integer health;
+
+  @Column(name = "energy", nullable = false)
+  private Integer energy;
+
+  @Column(name = "hunger", nullable = false)
+  private Integer hunger;
+
   @CreationTimestamp
   @Column(name = "created_at", nullable = false, updatable = false)
   private LocalDateTime createdAt;
@@ -66,6 +75,9 @@ public class Pet {
     if (url == null) url = "https://ibb.co/60tcMVfs";
     if (pointsTotal == null) pointsTotal = 0;
     if (experience == null) experience = 0;
+    if (health == null) health = 100;
+    if (energy == null) energy = 100;
+    if (hunger == null) hunger = 100;
   }
 
 }

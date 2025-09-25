@@ -15,4 +15,10 @@ public interface PetService {
 
   PetDTO addExperienceByUser(Integer experience, String email);
 
+  PetDTO feedPet(String email);
+
+  PetDTO healPet(String email);
+
+  PetDTO boostEnergy(String email);
+
 }

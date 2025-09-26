@@ -58,8 +58,8 @@ public class SecurityConfig {
 
     ResponseCookie cleared = ResponseCookie.from("refresh_token", "")
       .httpOnly(true)
-      .secure(request.isSecure())
-      .sameSite("Lax")
+      .secure(true)
+      .sameSite("None")
       .path("/auth/refresh")
       .maxAge(0)
       .build();

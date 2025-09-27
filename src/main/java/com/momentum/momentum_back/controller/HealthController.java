@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthController {
 
-  @GetMapping
+  @GetMapping("/health")
   public ResponseEntity<?> healthCheck() {
     Map<String, String> message = new HashMap<>();
     message.put("message", "Server active");
-    message.put("status", "200");
+    message.put("status", "OK");
 
     return ResponseEntity.ok(message); 
   }
